@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Q15 {
 	
 	static void triangleLB(int n) { //왼쪽 아래 직각
+		System.out.println("왼쪽 아래 직각");
 		for(int i = 1; i <= n; i++) {
 			for(int j = 1; j <= i; j++) {
 				System.out.print("*");
@@ -14,9 +15,9 @@ public class Q15 {
 	}
 	
 	static void triangleLU(int n ) {
-		//왼쪽 위가 직각
+		System.out.println("왼쪽 위 직각");
 		for(int i = 1; i <= n; i++) {
-			for(int j = n; j <= i; j--) {
+			for(int j =1; j <= n - i + 1; j++) {
 				System.out.print("*");
 			}
 			System.out.println();
@@ -25,6 +26,15 @@ public class Q15 {
 	
 	static void triangleRU(int n) {
 		//오른쪽 위가 직각
+		for(int i =1; i <= n; i++) {
+			for(int j = 1; j <= i -1; j++) {
+				System.out.print("");
+			}
+			for(int q = 1; q <= n - i +1; q++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
 	}
 	
 	static void triangleRB(int n) {
@@ -43,6 +53,7 @@ public class Q15 {
 		
 		triangleLB(n);
 		triangleLU(n);
+		triangleRU(n);
 	}
 
 }
